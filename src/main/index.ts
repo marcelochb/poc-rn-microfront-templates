@@ -1,0 +1,1 @@
+export {TemplateMainHome} from './home/view';
