@@ -6,7 +6,7 @@ import { PageWrapper, Texts } from '@poc/ui'
 export const PaymentDetailTemplate: React.FC<ModelOfPaymentDetailTemplate> = ({theme}) => {
   return (
     <PageWrapper theme={theme} isStatusBarLight>
-      <Texts.Title theme={theme}>PaymentListTemplate</Texts.Title>
+      <Texts.Title theme={theme}>PaymentDetailTemplate</Texts.Title>
     </PageWrapper>
   )
 }

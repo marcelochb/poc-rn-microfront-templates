@@ -7,8 +7,11 @@ export const TemplateMainHome: React.FC<ModelOfTemplateMainHome> = ({
   theme,
   title,
   labelFirstButton,
+  onPressFirstButton,
   labelSecondButton,
+  onPressSecondButton,
   labelThirdButton,
+  onPressThirdButton
 }) => {
   return (
     <PageWrapper theme={theme} isStatusBarLight>
@@ -18,16 +21,16 @@ export const TemplateMainHome: React.FC<ModelOfTemplateMainHome> = ({
       <Buttons.Base
         theme={theme}
         label={labelFirstButton}
-        onPress={() => {}}
+        onPress={onPressFirstButton}
         style={styles(theme).button}
       />
       <Buttons.Base
         theme={theme}
         label={labelSecondButton}
-        onPress={() => {}}
+        onPress={onPressSecondButton}
         style={styles(theme).button}
       />
-      <Buttons.Base theme={theme} label={labelThirdButton} onPress={() => {}} />
+      <Buttons.Base theme={theme} label={labelThirdButton} onPress={onPressThirdButton} />
     </PageWrapper>
   );
 };
