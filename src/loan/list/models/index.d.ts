@@ -7,7 +7,7 @@ export type ModelOfLoanListTemplate = {
   loans: LoanEntity[];
   loading: boolean;
   error: boolean;
-  errorText: string;
+  errorText?: string;
   navigateToDetail: (id:string) => void;
 }
 
