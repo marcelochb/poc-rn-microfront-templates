@@ -27,7 +27,7 @@ export const LoanListTemplate: React.FC<ILoanListTemplate> = ({
           name={item.name}
           type={item.type}
           amount={item.amount}
-          onPressed={() => callBack?.caller({id: item.id})}
+          onPressed={() => callBack?.call(this,item)}
           />
         }
       />

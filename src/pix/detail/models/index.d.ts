@@ -1,8 +1,8 @@
 import { ITheme } from "@poc/theme"
 import { Component } from "react"
 
-export type ModelOfPixDetailTemplate = {
+export type IPixDetailTemplate = {
   theme: ITheme
 }
 
-export class PixDetailTemplate extends Component<ModelOfPixDetailTemplate> {};
+export class PixDetailTemplate extends Component<IPixDetailTemplate> {};

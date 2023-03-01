@@ -1,7 +1,7 @@
-import {ITheme} from '@poc/theme';
+import {ITheme} from '@poc/interfaces';
 import {Component} from 'react';
 
-export type ModelOfTemplateMainHome = {
+export type ITemplateMainHome = {
   theme: ITheme;
   title: string;
   labelFirstButton: string;
@@ -12,4 +12,4 @@ export type ModelOfTemplateMainHome = {
   onPressThirdButton: () => void;
 };
 
-export class TemplateMainHome extends Component<ModelOfTemplateMainHome> {}
+export class TemplateMainHome extends Component<ITemplateMainHome> {}

@@ -1,8 +1,8 @@
 import { ITheme } from "@poc/theme"
 import { Component } from "react"
 
-export type ModelOfPaymentDetailTemplate = {
+export type IPaymentDetailTemplate = {
   theme: ITheme
 }
 
-export class PaymentDetailTemplate extends Component<ModelOfPaymentDetailTemplate> {};
+export class PaymentDetailTemplate extends Component<IPaymentDetailTemplate> {};

@@ -1,12 +1,6 @@
 import { LoanEntity } from "@poc/core";
-import { ITheme } from "@poc/theme"
+import { ITemplate } from "@poc/interfaces";
 import { Component } from "react"
 
-export type ModelOfLoanDetailTemplate = {
-  theme: ITheme;
-  loading: boolean;
-  error: boolean;
-  loan: LoanEntity;
-}
 
-export class LoanDetailTemplate extends Component<ModelOfLoanDetailTemplate> {};
+export class LoanDetailTemplate extends Component<ITemplate<LoanEntity>> {};

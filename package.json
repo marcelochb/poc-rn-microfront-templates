@@ -12,9 +12,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "@poc/theme": "*",
     "@poc/ui": "*",
     "@poc/core": "*",
+    "@poc/interfaces": "*",
     "react": "18.2.0",
     "react-native": "0.71.2"
   },

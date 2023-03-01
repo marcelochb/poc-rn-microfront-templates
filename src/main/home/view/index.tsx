@@ -1,9 +1,9 @@
 import React from 'react';
-import {ModelOfTemplateMainHome } from '../models';
+import {ITemplateMainHome } from '../models';
 import {Buttons, PageWrapper, Texts} from '@poc/ui';
 import {styles} from './styles';
 
-export const TemplateMainHome: React.FC<ModelOfTemplateMainHome> = ({
+export const TemplateMainHome: React.FC<ITemplateMainHome> = ({
   theme,
   title,
   labelFirstButton,
