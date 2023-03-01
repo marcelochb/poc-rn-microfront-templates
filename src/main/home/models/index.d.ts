@@ -1,8 +1,8 @@
-import {ModelOfTheme} from '@poc/theme';
+import {ITheme} from '@poc/theme';
 import {Component} from 'react';
 
 export type ModelOfTemplateMainHome = {
-  theme: ModelOfTheme;
+  theme: ITheme;
   title: string;
   labelFirstButton: string;
   onPressFirstButton: () => void;

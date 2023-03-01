@@ -1,15 +1,15 @@
 import { StyleSheet } from 'react-native'
 import React from 'react'
-import { ModelOfLoanListTemplate } from '../models'
+import { ILoanListTemplate } from '../models'
 import { List, ListItemLoan, PageWrapper, Texts } from '@poc/ui'
 
-export const LoanListTemplate: React.FC<ModelOfLoanListTemplate> = ({
+export const LoanListTemplate: React.FC<ILoanListTemplate> = ({
   theme,
-  loans,
+  listData,
   loading,
   error,
   errorText,
-  navigateToDetail
+  callBack,
 }) => {
   return (
     <PageWrapper
@@ -22,12 +22,12 @@ export const LoanListTemplate: React.FC<ModelOfLoanListTemplate> = ({
       <List
         theme={theme}
         style={styles.list}
-        data={loans}
+        data={listData}
         item={({ item }) => <ListItemLoan theme={theme}
           name={item.name}
           type={item.type}
           amount={item.amount}
-          onPressed={() => navigateToDetail(item.id)}
+          onPressed={() => callBack?.caller({id: item.id})}
           />
         }
       />

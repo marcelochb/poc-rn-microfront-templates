@@ -1,9 +1,9 @@
 import { LoanEntity } from "@poc/core";
-import { ModelOfTheme } from "@poc/theme"
+import { ITheme } from "@poc/theme"
 import { Component } from "react"
 
 export type ModelOfLoanDetailTemplate = {
-  theme: ModelOfTheme;
+  theme: ITheme;
   loading: boolean;
   error: boolean;
   loan: LoanEntity;

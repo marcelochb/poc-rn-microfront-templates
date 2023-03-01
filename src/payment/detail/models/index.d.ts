@@ -1,8 +1,8 @@
-import { ModelOfTheme } from "@poc/theme"
+import { ITheme } from "@poc/theme"
 import { Component } from "react"
 
 export type ModelOfPaymentDetailTemplate = {
-  theme: ModelOfTheme
+  theme: ITheme
 }
 
 export class PaymentDetailTemplate extends Component<ModelOfPaymentDetailTemplate> {};

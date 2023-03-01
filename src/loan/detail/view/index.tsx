@@ -2,7 +2,7 @@ import { StyleSheet, View } from 'react-native'
 import React from 'react'
 import { ModelOfLoanDetailTemplate } from '../models'
 import { PageWrapper, Texts } from '@poc/ui'
-import { ModelOfTheme } from '@poc/theme'
+import { ITheme } from '@poc/theme'
 
 export const LoanDetailTemplate: React.FC<ModelOfLoanDetailTemplate> = ({
   theme,
@@ -30,7 +30,7 @@ export const LoanDetailTemplate: React.FC<ModelOfLoanDetailTemplate> = ({
 }
 
 
-const styles = (theme:ModelOfTheme) => {
+const styles = (theme:ITheme) => {
   const {metrics, colors, fontFamily,fontSize} = theme;
  return StyleSheet.create({
   container: {

@@ -1,8 +1,8 @@
-import { ModelOfTheme } from "@poc/theme"
+import { ITheme } from "@poc/theme"
 import { Component } from "react"
 
 export type ModelOfPixListTemplate = {
-  theme: ModelOfTheme
+  theme: ITheme
 }
 
 export class PixListTemplate extends Component<ModelOfPixListTemplate> {}
