@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import React from 'react'
-import { IPixListTemplate } from '../models'
+import { IPixListTemplate } from '../interface'
 import { PageWrapper, Texts } from '@poc/ui'
 
 export const PixListTemplate: React.FC<IPixListTemplate> = ({theme}) => {

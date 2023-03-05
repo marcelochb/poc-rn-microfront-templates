@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import React from 'react'
-import { ILoanListTemplate } from '../models'
+import { ILoanListTemplate } from '../interface'
 import { List, ListItemLoan, PageWrapper, Texts } from '@poc/ui'
 
 export const LoanListTemplate: React.FC<ILoanListTemplate> = ({

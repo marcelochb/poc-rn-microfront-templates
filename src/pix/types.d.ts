@@ -1,2 +1,2 @@
-export * from './list/models';
-export * from './detail/models';
+export * from './list/interface';
+export * from './detail/interface';

@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 import React from 'react'
-import { IPixDetailTemplate } from '../models'
+import { IPixDetailTemplate } from '../interface'
 import { PageWrapper, Texts } from '@poc/ui'
 
 export const PixDetailTemplate: React.FC<IPixDetailTemplate> = ({theme}) => {
