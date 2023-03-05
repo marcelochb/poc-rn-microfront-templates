@@ -17,6 +17,7 @@ export type ILoanCreateTemplate = ITemplate<LoanEntity> & {
   cancelButtonLabel: string;
   onCancel: ((() => void) & (() => void)) | undefined;
   isLoading: boolean;
+  error: boolean;
 }
 
 

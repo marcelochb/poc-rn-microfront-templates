@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { ILoanCreateTemplate } from '../interface'
 import { Buttons, Input, PageWrapper } from '@poc/ui'
+import { styles } from './styles'
 
 export const LoanCreateTemplate: React.FC<ILoanCreateTemplate> = ({
   theme,
@@ -18,44 +19,42 @@ export const LoanCreateTemplate: React.FC<ILoanCreateTemplate> = ({
   onSubmit,
   cancelButtonLabel,
   onCancel,
-  loading
+  loading,
+  error
 }) => {
   return (
-    <PageWrapper theme={theme} isStatusBarLight>
+    <PageWrapper theme={theme} isStatusBarLight error={error}>
       <Input
         theme={theme}
         label={nameLabel}
         value={nameValue}
         onChangeText={nameChangeText}
-        error={nameError}
       />
       <Input
         theme={theme}
         label={typeLabel}
         value={typeValue}
         onChangeText={typeChangeText}
-        error={typeError}
       />
       <Input
         theme={theme}
         label={amountLabel}
         value={amountValue}
         onChangeText={amountChangeText}
-        error={amountError}
       />
       <Buttons.Base
         theme={theme}
+        style={styles(theme).button}
         label={submitButtonLabel}
         onPress={onSubmit}
         isLoading={loading}
       />
       <Buttons.Link
         theme={theme}
+        style={styles(theme).button}
         label={cancelButtonLabel}
         onPress={onCancel}
       />
     </PageWrapper>
   )
 }
-
-const styles = StyleSheet.create({})

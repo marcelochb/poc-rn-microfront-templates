@@ -1,7 +1,7 @@
-import { StyleSheet } from 'react-native'
 import React from 'react'
 import { ILoanListTemplate } from '../interface'
-import { List, ListItemLoan, PageWrapper, Texts } from '@poc/ui'
+import { Buttons, List, ListItemLoan, PageWrapper } from '@poc/ui'
+import { styles } from './styles'
 
 export const LoanListTemplate: React.FC<ILoanListTemplate> = ({
   theme,
@@ -10,6 +10,8 @@ export const LoanListTemplate: React.FC<ILoanListTemplate> = ({
   error,
   errorText,
   callBack,
+  navigateToCreate,
+  IconAddButton
 }) => {
   return (
     <PageWrapper
@@ -18,6 +20,13 @@ export const LoanListTemplate: React.FC<ILoanListTemplate> = ({
       error={error}
       errorText={errorText}
       isStatusBarLight
+      ButtonFixed={
+        <Buttons.Fixed
+          theme={theme}
+          onPress={navigateToCreate}
+          IconSVG={IconAddButton}
+        />
+      }
     >
       <List
         theme={theme}
@@ -35,6 +44,4 @@ export const LoanListTemplate: React.FC<ILoanListTemplate> = ({
   )
 }
 
-const styles = StyleSheet.create({
-  list: {flex: 1}
-})
+

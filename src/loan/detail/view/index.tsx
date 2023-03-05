@@ -4,6 +4,7 @@ import { PageWrapper, Texts } from '@poc/ui'
 import { ITheme } from '@poc/interfaces'
 import { ITemplate } from '@poc/interfaces'
 import { LoanEntity } from '@poc/core'
+import { styles } from './styles'
 
 export const LoanDetailTemplate: React.FC<ITemplate<LoanEntity>> = ({
   theme,
@@ -31,23 +32,4 @@ export const LoanDetailTemplate: React.FC<ITemplate<LoanEntity>> = ({
 }
 
 
-const styles = (theme:ITheme) => {
-  const {metrics, colors, fontFamily,fontSize} = theme;
- return StyleSheet.create({
-  container: {
-    padding: metrics.base,
-    margin: metrics.base,
-    borderColor: colors.elementsSecundary,
-    borderWidth: 0.2,
-    borderRadius: metrics.radiusBase
-  },
-  label: {
-    color: colors.elementsSecundary,
-    fontFamily: fontFamily.italic
-  },
-  value: {
-    fontSize: fontSize.large,
-    marginBottom: metrics.large
-  }
-})
-}
+
