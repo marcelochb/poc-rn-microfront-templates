@@ -1,12 +1,12 @@
 import { ITheme } from "@poc/theme"
 import { Component } from "react"
-import {PixEntity} from '@poc/core';
+import {PaymentEntity} from '@poc/core';
 import { ITemplate } from "@poc/interfaces";
 
-export type IPixListTemplate = ITemplate<PixEntity> & {
+export type IPaymentListTemplate = ITemplate<PaymentEntity> & {
   errorText?: string;
   navigateToCreate: () => void;
   IconAddButton: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
-export class PixListTemplate extends Component<IPixListTemplate> {}
+export class PaymentListTemplate extends Component<IPaymentListTemplate> {}

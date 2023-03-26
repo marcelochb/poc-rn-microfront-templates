@@ -1,15 +1,34 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import React from 'react'
-import { IPaymentDetailTemplate } from '../interface'
 import { PageWrapper, Texts } from '@poc/ui'
+import { ITemplate } from '@poc/interfaces'
+import { PaymentEntity } from '@poc/core'
+import { styles } from './styles'
 
-export const PaymentDetailTemplate: React.FC<IPaymentDetailTemplate> = ({theme}) => {
+export const PaymentDetailTemplate: React.FC<ITemplate<PaymentEntity>> = ({
+  theme,
+  loading,
+  error,
+  data,
+}) => {
   return (
-    <PageWrapper theme={theme} isStatusBarLight>
-      <Texts.Title theme={theme}>PaymentDetailTemplate</Texts.Title>
+    <PageWrapper
+      theme={theme}
+      isStatusBarLight
+      error={error}
+      loading={loading}
+    >
+      <View style={styles(theme).container}>
+        <Texts.SubTitle style={styles(theme).label} theme={theme}>Nome</Texts.SubTitle>
+        <Texts.Body style={styles(theme).value} theme={theme}>{data?.recipient}</Texts.Body>
+        <Texts.SubTitle style={styles(theme).label} theme={theme}>Tipo</Texts.SubTitle>
+        <Texts.Body style={styles(theme).value} theme={theme}>{data?.payer}</Texts.Body>
+        <Texts.SubTitle style={styles(theme).label} theme={theme}>Valor</Texts.SubTitle>
+        <Texts.Body style={styles(theme).value} theme={theme}>{data?.amount}</Texts.Body>
+      </View>
     </PageWrapper>
   )
 }
 
 
-const styles = StyleSheet.create({})
+

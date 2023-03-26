@@ -1,8 +1,6 @@
-import { ITheme } from "@poc/theme"
+import { PixEntity } from "@poc/core";
+import { ITemplate } from "@poc/interfaces";
 import { Component } from "react"
 
-export type IPixDetailTemplate = {
-  theme: ITheme
-}
 
-export class PixDetailTemplate extends Component<IPixDetailTemplate> {};
+export class PixDetailTemplate extends Component<ITemplate<PixEntity>> {};
