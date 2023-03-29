@@ -1,6 +1,6 @@
 import React from 'react'
 import { IPixListTemplate } from '../interface'
-import { Buttons, List, ListItemLoan, PageWrapper } from '@poc/ui'
+import { List, ListItemPix, PageWrapper } from '@poc/ui'
 import { styles } from './styles'
 
 export const PixListTemplate: React.FC<IPixListTemplate> = ({
@@ -10,8 +10,6 @@ export const PixListTemplate: React.FC<IPixListTemplate> = ({
   error,
   errorText,
   callBack,
-  navigateToCreate,
-  IconAddButton
 }) => {
   return (
     <PageWrapper
@@ -20,21 +18,15 @@ export const PixListTemplate: React.FC<IPixListTemplate> = ({
       error={error}
       errorText={errorText}
       isStatusBarLight
-      ButtonFixed={
-        <Buttons.Fixed
-          theme={theme}
-          onPress={navigateToCreate}
-          IconSVG={IconAddButton}
-        />
-      }
     >
       <List
         theme={theme}
         style={styles.list}
         data={listData}
-        item={({ item }) => <ListItemLoan theme={theme}
+        item={({ item }) => <ListItemPix theme={theme}
+          date={item.date}
           name={item.name}
-          type={item.bank}
+          bank={item.bank}
           amount={item.amount}
           onPressed={() => callBack?.call(this,item)}
           />

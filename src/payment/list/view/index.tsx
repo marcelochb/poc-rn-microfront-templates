@@ -1,6 +1,6 @@
 import React from 'react'
 import { IPaymentListTemplate } from '../interface'
-import { Buttons, List, ListItemLoan, PageWrapper } from '@poc/ui'
+import { Buttons, List, ListItemLoan, ListItemPayment, PageWrapper } from '@poc/ui'
 import { styles } from './styles'
 
 export const PaymentListTemplate: React.FC<IPaymentListTemplate> = ({
@@ -10,8 +10,6 @@ export const PaymentListTemplate: React.FC<IPaymentListTemplate> = ({
   error,
   errorText,
   callBack,
-  navigateToCreate,
-  IconAddButton
 }) => {
   return (
     <PageWrapper
@@ -20,21 +18,15 @@ export const PaymentListTemplate: React.FC<IPaymentListTemplate> = ({
       error={error}
       errorText={errorText}
       isStatusBarLight
-      ButtonFixed={
-        <Buttons.Fixed
-          theme={theme}
-          onPress={navigateToCreate}
-          IconSVG={IconAddButton}
-        />
-      }
     >
       <List
         theme={theme}
         style={styles.list}
         data={listData}
-        item={({ item }) => <ListItemLoan theme={theme}
-          name={item.recipient}
-          type={item.payer}
+        item={({ item }) => <ListItemPayment theme={theme}
+          recipient={item.recipient}
+          payer={item.payer}
+          dueDate={item.dueDate}
           amount={item.amount}
           onPressed={() => callBack?.call(this,item)}
           />
