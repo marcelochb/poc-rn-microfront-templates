@@ -11,7 +11,6 @@ export const LoanListTemplate: React.FC<ILoanListTemplate> = ({
   errorText,
   callBack,
   navigateToCreate,
-  IconAddButton
 }) => {
   return (
     <PageWrapper
@@ -24,7 +23,6 @@ export const LoanListTemplate: React.FC<ILoanListTemplate> = ({
         <Buttons.Fixed
           theme={theme}
           onPress={navigateToCreate}
-          IconSVG={IconAddButton}
         />
       }
     >
