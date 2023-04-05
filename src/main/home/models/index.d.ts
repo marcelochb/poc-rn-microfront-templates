@@ -10,6 +10,9 @@ export type ITemplateMainHome = {
   onPressSecondButton: () => void;
   labelThirdButton: string;
   onPressThirdButton: () => void;
+  isChecked: boolean;
+  onClickMidway: () => void;
+  onClickRiachuelo: () => void;
 };
 
 export class TemplateMainHome extends Component<ITemplateMainHome> {}
