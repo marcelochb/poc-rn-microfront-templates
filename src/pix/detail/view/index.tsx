@@ -19,12 +19,20 @@ export const PixDetailTemplate: React.FC<ITemplate<PixEntity>> = ({
       loading={loading}
     >
       <View style={styles(theme).container}>
-        <Texts.SubTitle style={styles(theme).label} theme={theme}>Nome</Texts.SubTitle>
-        <Texts.Body style={styles(theme).value} theme={theme}>{data?.name}</Texts.Body>
-        <Texts.SubTitle style={styles(theme).label} theme={theme}>Tipo</Texts.SubTitle>
-        <Texts.Body style={styles(theme).value} theme={theme}>{data?.bank}</Texts.Body>
-        <Texts.SubTitle style={styles(theme).label} theme={theme}>Valor</Texts.SubTitle>
-        <Texts.Body style={styles(theme).value} theme={theme}>{data?.amount}</Texts.Body>
+        <Texts.SubTitle style={styles(theme).label} theme={theme}>Transferência para</Texts.SubTitle>
+        <Texts.Body style={[styles(theme).value, styles(theme).marginBottom]} theme={theme}>{data?.name}</Texts.Body>
+        <Texts.SubTitle style={styles(theme).label} theme={theme}>Banco</Texts.SubTitle>
+        <Texts.Body style={[styles(theme).value,styles(theme).marginBottom]} theme={theme}>{data?.bank}</Texts.Body>
+        <View style={styles(theme).viewRow}>
+          <View>
+            <Texts.SubTitle style={styles(theme).label} theme={theme}>Valor</Texts.SubTitle>
+            <Texts.Body style={styles(theme).value} theme={theme}>{data?.amount}</Texts.Body>
+          </View>
+          <View>
+            <Texts.SubTitle style={styles(theme).label} theme={theme}>Valor</Texts.SubTitle>
+            <Texts.Body style={styles(theme).value} theme={theme}>{data?.amount}</Texts.Body>
+          </View>
+        </View>
       </View>
     </PageWrapper>
   )

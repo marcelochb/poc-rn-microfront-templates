@@ -19,12 +19,20 @@ export const PaymentDetailTemplate: React.FC<ITemplate<PaymentEntity>> = ({
       loading={loading}
     >
       <View style={styles(theme).container}>
-        <Texts.SubTitle style={styles(theme).label} theme={theme}>Nome</Texts.SubTitle>
-        <Texts.Body style={styles(theme).value} theme={theme}>{data?.recipient}</Texts.Body>
-        <Texts.SubTitle style={styles(theme).label} theme={theme}>Tipo</Texts.SubTitle>
-        <Texts.Body style={styles(theme).value} theme={theme}>{data?.payer}</Texts.Body>
-        <Texts.SubTitle style={styles(theme).label} theme={theme}>Valor</Texts.SubTitle>
-        <Texts.Body style={styles(theme).value} theme={theme}>{data?.amount}</Texts.Body>
+        <Texts.SubTitle style={styles(theme).label} theme={theme}>Beneficiário</Texts.SubTitle>
+        <Texts.Body style={[styles(theme).value, styles(theme).marginBottom]} theme={theme}>{data?.recipient}</Texts.Body>
+        <Texts.SubTitle style={styles(theme).label} theme={theme}>Pagador</Texts.SubTitle>
+        <Texts.Body style={[styles(theme).value, styles(theme).marginBottom]} theme={theme}>{data?.payer}</Texts.Body>
+        <View style={styles(theme).viewRow}>
+          <View>
+            <Texts.SubTitle style={styles(theme).label} theme={theme}>Valor</Texts.SubTitle>
+            <Texts.Body style={styles(theme).value} theme={theme}>{data?.amount}</Texts.Body>
+          </View>
+          <View>
+            <Texts.SubTitle style={styles(theme).label} theme={theme}>Vencimento</Texts.SubTitle>
+            <Texts.Body style={styles(theme).value} theme={theme}>{data?.dueDate}</Texts.Body>
+          </View>
+        </View>
       </View>
     </PageWrapper>
   )

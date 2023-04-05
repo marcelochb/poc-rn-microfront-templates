@@ -7,17 +7,17 @@ export const styles = (theme:ITheme) => {
   container: {
     padding: metrics.base,
     margin: metrics.base,
-    borderColor: colors.elementsSecundary,
+    borderColor: colors.elements,
     borderWidth: 0.2,
     borderRadius: metrics.radiusBase
   },
   label: {
-    color: colors.elementsSecundary,
+    color: colors.elements,
     fontFamily: fontFamily.italic
   },
   value: {
-    fontSize: fontSize.large,
-    marginBottom: metrics.large
-  }
+    fontSize: fontSize.large
+  },
+  marginBottom: {marginBottom: metrics.large}
 })
 }
