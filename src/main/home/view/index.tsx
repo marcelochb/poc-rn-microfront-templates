@@ -7,12 +7,8 @@ import { View } from 'react-native';
 export const TemplateMainHome: React.FC<ITemplateMainHome> = ({
   theme,
   title,
-  labelFirstButton,
-  onPressFirstButton,
-  labelSecondButton,
-  onPressSecondButton,
-  labelThirdButton,
-  onPressThirdButton,
+  labelButton,
+  onPressed,
   isChecked,
   onClickMidway,
   onClickRiachuelo,
@@ -39,17 +35,10 @@ export const TemplateMainHome: React.FC<ITemplateMainHome> = ({
       </Texts.Title>
       <Buttons.Base
         theme={theme}
-        label={labelFirstButton}
-        onPress={onPressFirstButton}
+        label={labelButton}
+        onPress={onPressed}
         style={styles(theme).button}
       />
-      <Buttons.Base
-        theme={theme}
-        label={labelSecondButton}
-        onPress={onPressSecondButton}
-        style={styles(theme).button}
-      />
-      <Buttons.Base theme={theme} label={labelThirdButton} onPress={onPressThirdButton} />
     </PageWrapper>
   );
 };
