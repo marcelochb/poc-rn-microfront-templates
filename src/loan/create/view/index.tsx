@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { ILoanCreateTemplate } from '../interface'
-import { Buttons, Input, PageWrapper } from '@poc/ui'
 import { styles } from './styles'
+import { PageWrapper } from '../../../../../ui/src/components/molecules/exhibitions/PageWrapper/View'
+import { Input } from '../../../../../ui/src/components/atoms/inputControls/Input/View'
+import { Buttons } from '../../../../../ui/src/components/molecules/interactives/Buttons/View'
 
 export const LoanCreateTemplate: React.FC<ILoanCreateTemplate> = ({
   theme,

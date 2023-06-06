@@ -1,9 +1,10 @@
-import { StyleSheet, View } from 'react-native'
+import { View } from 'react-native'
 import React from 'react'
-import { PageWrapper, Texts } from '@poc/ui'
-import { ITemplate } from '@poc/interfaces'
-import { LoanEntity } from '@poc/core'
+import { ITemplate } from '../../../../../interfaces/src/templates'
+import { LoanEntity } from '../../../../../core/src/modules/loan/domain/entities'
 import { styles } from './styles'
+import { PageWrapper } from '../../../../../ui/src/components/molecules/exhibitions/PageWrapper/View'
+import { Texts } from '../../../../../ui/src/components/atoms/exhibitions/Texts/View'
 
 export const LoanDetailTemplate: React.FC<ITemplate<LoanEntity>> = ({
   theme,

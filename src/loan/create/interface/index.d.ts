@@ -1,5 +1,5 @@
-import { LoanEntity } from "@poc/core";
-import { ITemplate } from "@poc/interfaces";
+import { LoanEntity } from "../../../../../core/src/modules/loan/domain/entities";
+import { ITemplate } from "../../../../../interfaces/src/templates";
 import { Component } from "react";
 
 export type ILoanCreateTemplate = ITemplate<LoanEntity> & {

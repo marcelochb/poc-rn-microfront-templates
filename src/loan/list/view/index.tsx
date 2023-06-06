@@ -1,7 +1,10 @@
 import React from 'react'
 import { ILoanListTemplate } from '../interface'
-import { Buttons, List, ListItemLoan, PageWrapper } from '@poc/ui'
 import { styles } from './styles'
+import { PageWrapper } from '../../../../../ui/src/components/molecules/exhibitions/PageWrapper/View'
+import { Buttons } from '../../../../../ui/src/components/molecules/interactives/Buttons/View'
+import { List } from '../../../../../ui/src/components/molecules/exhibitions/List/View'
+import { ListItemLoan } from '../../../../../ui/src/components/molecules/interactives/ListItemLoan/View'
 
 export const LoanListTemplate: React.FC<ILoanListTemplate> = ({
   theme,
@@ -30,7 +33,7 @@ export const LoanListTemplate: React.FC<ILoanListTemplate> = ({
         theme={theme}
         style={styles.list}
         data={listData}
-        item={({ item }) => <ListItemLoan theme={theme}
+        item={({ item }) => <ListItemLoan theme={theme} key={item.id}
           name={item.name}
           type={item.type}
           amount={item.amount}
